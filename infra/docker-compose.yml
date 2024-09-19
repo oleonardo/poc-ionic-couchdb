@@ -1,0 +1,25 @@
+services:
+  couchdb:
+    image: couchdb:3 # Specify the CouchDB version
+    container_name: couchdb
+    platform: linux/arm64
+    restart: always
+    ports:
+      - "5984:5984" # Expose CouchDB on port 5984
+    environment:
+      - COUCHDB_USER=${COUCHDB_USER} # Set CouchDB admin username
+      - COUCHDB_PASSWORD=${COUCHDB_PASSWORD} # Set CouchDB admin password
+      - COUCHDB_SECRET=${COUCHDB_SECRET} # Set CouchDB secret key
+    volumes:
+      - couchdb_data:/opt/couchdb/data # Persist data using Docker volumes
+      - couchdb_etc:/opt/couchdb/etc/local.d # Persist configuration using Docker volumes
+    networks:
+      - proxy
+
+volumes:
+  couchdb_data:
+  couchdb_etc:
+
+networks:
+  proxy:
+    external: true

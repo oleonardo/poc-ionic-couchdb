@@ -1,0 +1,70 @@
+# Specifies intentionally untracked files to ignore when using Git
+# http://git-scm.com/docs/gitignore
+
+*~
+*.sw[mnpcod]
+.tmp
+*.tmp
+*.tmp.*
+UserInterfaceState.xcuserstate
+$RECYCLE.BIN/
+
+*.log
+log.txt
+
+
+/sx-poc/.sourcemaps
+/sx-poc/.versions
+/sx-poc/coverage
+
+# Ionic
+/sx-poc/.ionic
+/sx-poc/www
+/sx-poc/platforms
+/sx-poc/plugins
+
+# Compiled output
+/sx-poc/dist
+/sx-poc/tmp
+/sx-poc/out-tsc
+/sx-poc/bazel-out
+
+# Node
+/sx-poc/node_modules
+/sx-poc/npm-debug.log
+/sx-poc/yarn-error.log
+
+# IDEs and editors
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+
+# Miscellaneous
+/sx-poc/.angular
+/sx-poc/.angular/cache
+/sx-poc/.sass-cache/
+/sx-poc/.nx
+/sx-poc/.nx/cache
+/sx-poc/connect.lock
+/sx-poc/coverage
+/sx-poc/libpeerconnection.log
+/sx-poc/testemwec.log
+/sx-poc/typings
+
+# System files
+.DS_Store
+Thumbs.db
